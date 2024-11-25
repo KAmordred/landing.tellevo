@@ -7,18 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Detectar dispositivos
+  
   const isAndroid = /Android/i.test(navigator.userAgent);
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   if (isAndroid) {
-    downloadButton.classList.remove('hidden'); // Mostrar el botón
+    downloadButton.classList.remove('hidden'); 
     messageElement.textContent = 'Estás en un dispositivo Android. Descarga la app ahora.';
   } else if (isIOS) {
-    downloadButton.classList.add('hidden'); // Ocultar el botón
+    downloadButton.classList.add('hidden'); 
     messageElement.textContent = 'Estás en un dispositivo iOS.';
   } else {
-    downloadButton.classList.add('hidden'); // Ocultar el botón
+    downloadButton.classList.add('hidden'); 
     messageElement.textContent = 'Tu dispositivo no es compatible.';
   }
 });
